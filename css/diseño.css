@@ -1,0 +1,442 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #000000, #1a0000, #3d0202);
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Header reorganizado */
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+  background: #000000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor superior: logo izquierda y título derecha */
+header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Logo */
+header .logo {
+  width: 250px;
+}
+
+header .logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* DUKIPALLOZA */
+header .header-title h1 {
+  font-size: 4rem;
+  color: #ce0d0d;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: right;
+}
+
+/* Nav */
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+  transition: color 0.3s, transform 0.3s, text-decoration 0.3s;
+}
+
+nav a:hover {
+  color: #ce0d0d;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* ===================== */
+/* TITULOS PRINCIPALES */
+.titulo-pagina {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #ce0d0d;
+  text-align: left;
+  font-weight: 900;
+}
+
+/* Presentación */
+.Presentacion {
+  padding: 40px 10%;
+  text-align: left;
+  animation: fadeIn 3s ease forwards;
+}
+
+.Presentacion h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+  justify-content: left;
+}
+
+.parrafo-principal {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  justify-content: left;
+}
+
+/* Contenedor Video */
+.multimedia-combinada {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 40px 10%;
+}
+
+/* Video del concierto */
+.video-container video {
+  border: 4px solid #ff0000;
+  border-radius: 10px;
+}
+
+/* Estilos musicales */
+#estilos-musicales h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#estilos-musicales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Lista de artistas */
+.lista-artistas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  list-style: none;
+}
+
+.lista-artistas li {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.lista-artistas li:hover {
+  transform: scale(1.05);
+  background: rgba(66, 0, 0, 0.7);
+}
+
+.lista-artistas img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.lista-artistas h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.lista-artistas .descripcion {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.lista-artistas li:hover .descripcion {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.lista-artistas .descripcion p {
+  font-size: 0.95rem;
+  color: #fff;
+  font-style: italic;
+}
+
+/* Videos locales y de youtube, audio*/
+.multimedia-combinada img {
+  border: 3px solid #ce0d0d;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.multimedia-combinada audio {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  background: #1a0000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.video-youtube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.video-youtube iframe {
+  width: 100%;
+  height: 440px;
+  border-radius: 10px;
+  border: 3px solid #ff0000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Ubicación */
+#ubicacion h2 {
+  text-align: center;
+  color: #ce0d0d;
+  margin-bottom: 20px;
+}
+
+#ubicacion iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  border: 3px solid #ff0000;
+  border-radius: 12px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  font-size: 0.9rem;
+  color: #ff5555;
+  border-top: 1px solid #ce0d0d;
+}
+
+/* tabla de horarios */
+table.horarios {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.horarios th, table.horarios td {
+  border: 1px solid #fff;
+  padding: 8px;
+}
+
+table.horarios th {
+  background-color: rgba(255,255,255,0.2);
+}
+
+table.horarios td span {
+  display: block;
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 2px;
+}
+
+table.horarios td.mercado { background-color: #FFD600; color: #000; font-weight: bold;}
+table.horarios td.brahma { background-color: #E01B23; color: #fff; font-weight: bold;}
+table.horarios td.hispa { background-color: #1C6DD0; color: #fff; font-weight: bold;}
+table.horarios td.barras { background-color: #B45FC3; color: #fff; font-weight: bold;}
+
+/* Cuadrados de informacion de las entradas */
+#info-entrada {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+#info-entrada .tarjeta {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 220px;
+  height: 220px;
+  border: 3px solid #ce0d0d;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  text-align: left;
+  flex-shrink: 0;
+  overflow: auto;
+  transition: transform 0.3s, background 0.3s;
+}
+
+#info-entrada .tarjeta:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#info-entrada .tarjeta h3 {
+  color: #ce0d0d;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#info-entrada .tarjeta ul,
+#info-entrada .tarjeta ol {
+  list-style-type: square;
+  list-style-position: inside;
+  padding-left: 10px;
+  margin: 0;
+}
+
+#info-entrada .tarjeta li {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+/* Formulario de contacto */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border: 3px solid #ce0d0d;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.formulario-contacto label {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+  padding: 10px;
+  border: 2px solid #ce0d0d;
+  border-radius: 8px;
+  background: #1a0000;
+  color: #fff;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: #ff0000;
+}
+
+.formulario-contacto button {
+  background: #ce0d0d;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background: #ff0000;
+  transform: scale(1.05);
+}
+
+.formulario-contacto p {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formulario-contacto label input[type="radio"],
+.formulario-contacto label input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/*datos de contacto*/
+
+#info-contacto {
+  background-color: #1a1a1a; /* fondo oscuro */
+  color: #f0f0f0; /* texto claro */
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+#info-contacto h3 {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+#info-contacto p {
+  margin: 5px 0;
+}
+
+#info-contacto .redes a {
+  font-weight: bold;
+  color: #ce0d0d; /* amarillo suave para resaltar */
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#info-contacto .redes a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
